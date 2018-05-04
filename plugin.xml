@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-bottom-bar" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-bottom-bar</name>
+    <js-module name="cordova-plugin-bottom-bar" src="www/cordova-plugin-bottom-bar.js">
+        <clobbers target="BottomBar" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="BottomBar">
+                <param name="ios-package" value="CDVBottomBar" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVBottomBar.h" />
+        <source-file src="src/ios/CDVBottomBar.m" />
+    </platform>
+    <platform name="android">
+    		<hook type="after_plugin_add" src="src/android/android-install.js" />
+        <hook type="after_plugin_install" src="src/android/android-install.js" />
+        <hook type="before_plugin_rm" src="src/android/android-install.js" />
+        <hook type="before_plugin_uninstall" src="src/android/android-install.js" />
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="BottomBar">
+                <param name="android-package" value="bottombar.BottomBar" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <edit-config file="AndroidManifest.xml" target="/manifest/application/activity" mode="merge">
+        	<activity android:name="BottomBarActivity" />
+        </edit-config>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/BottomBar.java" target-dir="src/bottombar" />
+        <framework src="src/android/Bottombar.gradle" custom="true" type="gradleReference"/>
+        
+         <!--  drawable src/android/resources -->
+        <resource-file src="src/android/res/drawable-hdpi/home.png" target="res/drawable-hdpi/home.png" />
+        <resource-file src="src/android/res/drawable-mdpi/home.png" target="res/drawable-mdpi/home.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/home.png" target="res/drawable-xhdpi/home.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/home.png" target="res/drawable-xxhdpi/home.png" />
+        
+        <resource-file src="src/android/res/drawable-hdpi/home1.png" target="res/drawable-hdpi/home1.png" />
+        <resource-file src="src/android/res/drawable-mdpi/home1.png" target="res/drawable-mdpi/home1.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/home1.png" target="res/drawable-xhdpi/home1.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/home1.png" target="res/drawable-xxhdpi/home1.png" />
+        
+        <resource-file src="src/android/res/drawable-hdpi/line.png" target="res/drawable-hdpi/line.png" />
+        <resource-file src="src/android/res/drawable-mdpi/line.png" target="res/drawable-mdpi/line.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/line.png" target="res/drawable-xhdpi/line.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/line.png" target="res/drawable-xxhdpi/line.png" />
+        
+        <resource-file src="src/android/res/drawable-hdpi/line1.png" target="res/drawable-hdpi/line1.png" />
+        <resource-file src="src/android/res/drawable-mdpi/line1.png" target="res/drawable-mdpi/line1.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/line1.png" target="res/drawable-xhdpi/line1.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/line1.png" target="res/drawable-xxhdpi/line1.png" />
+        
+        <resource-file src="src/android/res/drawable-hdpi/news.png" target="res/drawable-hdpi/news.png" />
+        <resource-file src="src/android/res/drawable-mdpi/news.png" target="res/drawable-mdpi/news.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/news.png" target="res/drawable-xhdpi/news.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/news.png" target="res/drawable-xxhdpi/news.png" />
+        
+        <resource-file src="src/android/res/drawable-hdpi/news1.png" target="res/drawable-hdpi/news1.png" />
+        <resource-file src="src/android/res/drawable-mdpi/news1.png" target="res/drawable-mdpi/news1.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/news1.png" target="res/drawable-xhdpi/news1.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/news1.png" target="res/drawable-xxhdpi/news1.png" />
+        
+        <resource-file src="src/android/res/drawable-hdpi/mine.png" target="res/drawable-hdpi/mine.png" />
+        <resource-file src="src/android/res/drawable-mdpi/mine.png" target="res/drawable-mdpi/mine.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/mine.png" target="res/drawable-xhdpi/mine.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/mine.png" target="res/drawable-xxhdpi/mine.png" />
+        
+        <resource-file src="src/android/res/drawable-hdpi/mine1.png" target="res/drawable-hdpi/mine1.png" />
+        <resource-file src="src/android/res/drawable-mdpi/mine1.png" target="res/drawable-mdpi/mine1.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/mine1.png" target="res/drawable-xhdpi/mine1.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/mine1.png" target="res/drawable-xxhdpi/mine1.png" />
+        
+        <resource-file src="src/android/res/drawable/my_tab_home.xml" target="res/drawable/my_tab_home.xml"/>
+         <resource-file src="src/android/res/drawable/my_tab_line.xml" target="res/drawable/my_tab_line.xml"/>
+          <resource-file src="src/android/res/drawable/my_tab_news.xml" target="res/drawable/my_tab_news.xml"/>
+           <resource-file src="src/android/res/drawable/my_tab_mine.xml" target="res/drawable/my_tab_mine.xml"/>
+        <resource-file src="src/android/res/xml/bottombar_tabs.xml" target="res/xml/bottombar_tabs.xml" />
+        <resource-file src="src/android/res/layout/bottom_bar.xml" target="res/layout/bottom_bar.xml" />
+        
+    </platform>
+</plugin>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/my_tab_home"
+        title="首页"
+        activeColor="#059aef"/>
+    <tab
+        id="@+id/tab_line"
+        icon="@drawable/my_tab_line"
+        title="线路"
+        activeColor="#059aef"/>
+    <tab
+        id="@+id/tab_news"
+        icon="@drawable/my_tab_news"
+        title="发现"
+        activeColor="#059aef"/>
+    <tab
+        id="@+id/tab_mine"
+        icon="@drawable/my_tab_mine"
+        title="我的"
+        activeColor="#059aef"/>
+</tabs>
+

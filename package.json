@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-bottom-bar",
+  "version": "1.0.0",
+  "description": "android bottombar",
+  "cordova": {
+    "id": "cordova-plugin-bottom-bar",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "ISC"
+}
